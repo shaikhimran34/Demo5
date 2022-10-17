@@ -1,0 +1,40 @@
+pipeline{
+    agent{
+        label "node"
+    }
+    stages{
+        stage("A"){
+            steps{
+                echo "========executing FirstA========"
+            }
+            
+        }
+    }
+    stages{
+        stage("B"){
+            steps{
+                echo "========executing SecondA========"
+            }
+            
+        }
+    }
+    stages{
+        stage("C"){
+            steps{
+                echo "========executing ThirdA========"
+            }
+            
+        }
+    }
+    post{
+        always{
+            echo "========always========"
+        }
+        success{
+            echo "========pipeline executed successfully ========"
+        }
+        failure{
+            echo "========pipeline execution failed========"
+        }
+    }
+}
