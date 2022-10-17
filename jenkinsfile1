@@ -8,15 +8,13 @@ pipeline{
             
         }
     
-    stages{
-        stage("B"){
+          stage("B"){
             steps{
                 echo "executing Second"
             }
             
         }
-    
-    stages{
+ 
         stage("C"){
             steps{
                 echo "executing Third"
