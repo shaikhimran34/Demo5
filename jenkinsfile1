@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("A"){
             steps{
-                echo "========executing FirstA========"
+                echo "executing First"
             }
             
         }
@@ -11,7 +11,7 @@ pipeline{
     stages{
         stage("B"){
             steps{
-                echo "========executing SecondA========"
+                echo "executing Second"
             }
             
         }
@@ -19,20 +19,20 @@ pipeline{
     stages{
         stage("C"){
             steps{
-                echo "========executing ThirdA========"
+                echo "executing Third"
             }
             
         }
     }
     post{
         always{
-            echo "========always========"
+            echo "always"
         }
         success{
-            echo "========pipeline executed successfully ========"
+            echo "pipeline executed successfully "
         }
         failure{
-            echo "========pipeline execution failed========"
+            echo "pipeline execution failed"
         }
     }
 }
